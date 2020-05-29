@@ -34,7 +34,7 @@
 */
 console.clear();
 
-let people = [
+const people = [
     {
     name: "A",
     age: "10"
@@ -54,13 +54,6 @@ let people = [
  
 ];
 
-function listpeople(people){
-    for (let i=0;i<people.length;i++){
-        console.log(people[i].name)
-        console.log(people[i].age)
-    }
-}
-listpeople(people);
 
 
 /*
@@ -71,14 +64,14 @@ listpeople(people);
     destructured.
 */
 
-const obj={
-    name: 'A',
+const obj= {
+    name:'A',
     age: 10
-}
+};
 
-const PrintPerson  = ({name,age})=> {
-    console.log('${name,age}')
-    console.log("Name:" +name, "Age:" +age)
+   const PrintPerson  = ({name,age})=> {
+   console.log(`Name:${name}`,`Age:${age}`) 
+   
 };
 PrintPerson(obj);
 
@@ -88,9 +81,7 @@ PrintPerson(obj);
     Call your arrow function passing the array item
     as an argument.
 
-    */
-
-
+*/
 
        for(let person of people){
        PrintPerson(person);
