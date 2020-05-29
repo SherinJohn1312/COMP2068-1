@@ -37,31 +37,30 @@ console.clear();
 let people = [
     {
     name: "A",
-    shade: "10"
+    age: "10"
   },
    {
     name: "B",
-    shade: "20"
+    age: "20"
   },
   {
     name: "C",
-    shade: "30"
+    age: "30"
   },
    {
     name: "D",
-    shade: "40"
+    age: "40"
   }
  
 ];
 
 function listpeople(people){
-    for (let i=0;i<people .length;i++){
+    for (let i=0;i<people.length;i++){
         console.log(people[i].name)
-        console.log(people[i].shade)
+        console.log(people[i].age)
     }
 }
 listpeople(people);
-
 
 
 /*
@@ -73,24 +72,37 @@ listpeople(people);
     destructured.
 */
 
+const obj={
+    name: 'Bob',
+    age: (40).toString()
+}
+
+
+const PrintPerson  = ({name,age})=> {
+    console.log("Name:" +name,"Age:" +age);
+};
+PrintPerson(obj);
+
 
 /*
   Step 3 (3 points):
     Loop over your array using a for/of loop.
     Call your arrow function passing the array item
     as an argument.
-*/
 
-/*
-const PrintPerson  = ({
-    name,
-    age
-})
-==> {console.log("Name:" +name,"Age:" +age)}
+
+
+
+
+
+
+
 
 
 
 for(person of person){
     PrintPerson(person)
 }
+
+
 */
