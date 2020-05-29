@@ -66,23 +66,21 @@ listpeople(people);
 /*
   Step 2 (6 points):
     Create an arrow function that accepts
-    a destructured object as an argument. In the
-    body of your function, console.log a string
+    a destructured object as an argument. In the body of your function, console.log a string
     template utilizing the properties you
     destructured.
 */
 
 const obj={
-    name: 'Bob',
-    age: (40).toString()
+    name: 'A',
+    age: 10
 }
 
-
 const PrintPerson  = ({name,age})=> {
-    console.log("Name:" +name,"Age:" +age);
+    console.log('${name,age}')
+    console.log("Name:" +name, "Age:" +age)
 };
 PrintPerson(obj);
-
 
 /*
   Step 3 (3 points):
@@ -90,19 +88,12 @@ PrintPerson(obj);
     Call your arrow function passing the array item
     as an argument.
 
+    */
 
 
 
+       for(let person of people){
+       PrintPerson(person);
+       }
 
 
-
-
-
-
-
-for(person of person){
-    PrintPerson(person)
-}
-
-
-*/
